@@ -5,12 +5,12 @@
         <!-- Title columns -->
         <div v-if="rows.length" class="simple-repeatable-header-row flex border-b border-40 py-2">
           <div v-for="(rowField, i) in fields" :key="i" class="font-bold text-90 text-md w-full ml-3 flex">
-            {{ rowField.name }}
+            <div class="m-auto">{{ rowField.name }}</div>
 
             <!--  If field is nova-translatable, render seperate locale-tabs   -->
             <nova-translatable-locale-tabs
               style="padding: 0"
-              class="ml-auto"
+              class="ml-auto text-center"
               v-if="rowField.component === 'translatable-field'"
               :locales="rowField.formattedLocales"
               :display-type="rowField.translatable.display_type"
@@ -44,7 +44,7 @@
                 :field="rowField"
                 :errors="repeatableValidation.errors"
                 :unique-id="getUniqueId(field, rowField)"
-                class="mr-3"
+                class="mr-3 text-center"
               />
             </div>
 

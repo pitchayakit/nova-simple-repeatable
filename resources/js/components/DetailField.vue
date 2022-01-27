@@ -22,11 +22,11 @@
 
       <div class="overflow-hidden relative rounded-lg bg-white shadow border border-60" v-if="values && values.length">
         <table class="table w-full table-default nova-resource-table">
-          <thead>
+          <!-- <thead>
             <tr>
               <th v-for="(header, i) in headers" :key="i">{{ header.name }}</th>
             </tr>
-          </thead>
+          </thead> -->
           <tbody>
             <tr v-for="(row, i) of field.rows" :key="i" class="simple-repeatable-table-row">
               <td
